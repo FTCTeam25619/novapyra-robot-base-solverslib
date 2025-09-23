@@ -27,6 +27,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.firstinspires.ftc.teamcode.constants.PedroConstants;
+
 /**
  * This is the Tuning class. It contains a selection menu for various tuning OpModes.
  *
@@ -78,10 +80,10 @@ public class Tuning extends SelectableOpMode {
     @Override
     public void onSelect() {
         if (follower == null) {
-            follower = Constants.createFollower(hardwareMap);
+            follower = PedroConstants.createFollower(hardwareMap);
             PanelsConfigurables.INSTANCE.refreshClass(this);
         } else {
-            follower = Constants.createFollower(hardwareMap);
+            follower = PedroConstants.createFollower(hardwareMap);
         }
 
         follower.setStartingPose(new Pose());
